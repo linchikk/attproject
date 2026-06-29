@@ -227,7 +227,7 @@ section {
 
 .hero {
   min-height: 856px;
-  background: url("../images/hero.png") center/cover no-repeat;
+  background: url("./images/hero.png") center/cover no-repeat;
   position: relative;
   display: flex;
   align-items: center;
