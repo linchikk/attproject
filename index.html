@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Экскурсия — Тысячелетний Брест и Брестская крепость</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- flatpickr календарь -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="container">
+
+        <a href="#" class="header__logo">
+            <img
+                src="images/logo.png"
+                alt="Ekskursii.by"
+            >
+        </a>
+
+        <nav class="header__nav">
+
+            <a href="#" class="header__link">
+                ПРОГРАММА
+            </a>
+
+            <a href="#" class="header__link">
+                РАСПИСАНИЕ
+            </a>
+
+            <a href="#" class="header__link">
+                ОТЗЫВЫ
+            </a>
+            <!-- контакты (dropdown блок) -->
+            <div class="header__contacts">
+  
+                <button class="header__contacts-btn">
+                    КОНТАКТЫ
+                    <svg class="header__arrow" viewBox="0 0 24 24">
+                        <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </button>
+                <!-- выпадающее меню контактов -->
+                <div class="header__dropdown">
+
+                    <a href="tel:+375173944913" class="header__dropdown-phone">
+
+                    <svg class="icon icon--phone" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clip-rule="evenodd"/>
+                    </svg>
+
+                    +375 17 394-49-13
+                    </a>
+
+                    <div class="header__dropdown-socials">
+
+                    <a href="#"><svg class="icon icon--social" viewBox="0 0 640 640">
+                        <path d="M476.9 161.1C435 119.1 379.2 96 319.9 96C197.5 96 97.9 195.6 97.9 318C97.9 357.1 108.1 395.3 127.5 429L96 544L213.7 513.1C246.1 530.8 282.6 540.1 319.8 540.1L319.9 540.1C442.2 540.1 544 440.5 544 318.1C544 258.8 518.8 203.1 476.9 161.1zM319.9 502.7C286.7 502.7 254.2 493.8 225.9 477L219.2 473L149.4 491.3L168 423.2L163.6 416.2C145.1 386.8 135.4 352.9 135.4 318C135.4 216.3 218.2 133.5 320 133.5C369.3 133.5 415.6 152.7 450.4 187.6C485.2 222.5 506.6 268.8 506.5 318.1C506.5 419.9 421.6 502.7 319.9 502.7zM421.1 364.5C415.6 361.7 388.3 348.3 383.2 346.5C378.1 344.6 374.4 343.7 370.7 349.3C367 354.9 356.4 367.3 353.1 371.1C349.9 374.8 346.6 375.3 341.1 372.5C308.5 356.2 287.1 343.4 265.6 306.5C259.9 296.7 271.3 297.4 281.9 276.2C283.7 272.5 282.8 269.3 281.4 266.5C280 263.7 268.9 236.4 264.3 225.3C259.8 214.5 255.2 216 251.8 215.8C248.6 215.6 244.9 215.6 241.2 215.6C237.5 215.6 231.5 217 226.4 222.5C221.3 228.1 207 241.5 207 268.8C207 296.1 226.9 322.5 229.6 326.2C232.4 329.9 268.7 385.9 324.4 410C359.6 425.2 373.4 426.5 391 423.9C401.7 422.3 423.8 410.5 428.4 397.5C433 384.5 433 373.4 431.6 371.1C430.3 368.6 426.6 367.2 421.1 364.5z"/>
+                    </svg></a>
+                    <a href="#"><svg class="icon icon--social" viewBox="0 0 640 640">
+                        <path d="M320 72C183 72 72 183 72 320C72 457 183 568 320 568C457 568 568 457 568 320C568 183 457 72 320 72zM435 240.7C431.3 279.9 415.1 375.1 406.9 419C403.4 437.6 396.6 443.8 390 444.4C375.6 445.7 364.7 434.9 350.7 425.7C328.9 411.4 316.5 402.5 295.4 388.5C270.9 372.4 286.8 363.5 300.7 349C304.4 345.2 367.8 287.5 369 282.3C369.2 281.6 369.3 279.2 367.8 277.9C366.3 276.6 364.2 277.1 362.7 277.4C360.5 277.9 325.6 300.9 258.1 346.5C248.2 353.3 239.2 356.6 231.2 356.4C222.3 356.2 205.3 351.4 192.6 347.3C177.1 342.3 164.7 339.6 165.8 331C166.4 326.5 172.5 322 184.2 317.3C256.5 285.8 304.7 265 328.8 255C397.7 226.4 412 221.4 421.3 221.2C423.4 221.2 427.9 221.7 430.9 224.1C432.9 225.8 434.1 228.2 434.4 230.8C434.9 234 435 237.3 434.8 240.6z"/>
+                    </svg></a>
+                    <a href="#"><svg class="icon icon--social" viewBox="0 0 640 640">
+                        <path d="M508.3 113.9C495.6 102.2 444.2 64.9 329.6 64.4C329.6 64.4 194.5 56.3 128.7 116.7C92.1 153.3 79.2 207 77.8 273.5C76.4 340 74.7 464.6 194.8 498.4L194.9 498.4L194.8 550C194.8 550 194 570.9 207.8 575.1C224.4 580.3 234.2 564.4 250.1 547.3C258.8 537.9 270.8 524.1 279.9 513.6C362.1 520.5 425.2 504.7 432.4 502.4C449 497 542.9 485 558.1 360.4C573.9 231.8 550.5 150.6 508.3 113.9zM522.2 351C509.3 455 433.2 461.6 419.2 466.1C413.2 468 357.7 481.8 288 477.3C288 477.3 236 540 219.8 556.3C214.5 561.6 208.7 561.1 208.8 550.6C208.8 543.7 209.2 464.9 209.2 464.9L209.2 464.9C107.4 436.7 113.4 330.6 114.5 275.1C115.6 219.6 126.1 174.1 157.1 143.5C212.8 93 327.5 100.5 327.5 100.5C424.4 100.9 470.8 130.1 481.6 139.9C517.3 170.5 535.5 243.7 522.2 351zM383.2 270.2C383.6 278.8 370.7 279.4 370.3 270.8C369.2 248.8 358.9 238.1 337.7 236.9C329.1 236.4 329.9 223.5 338.4 224C366.3 225.5 381.8 241.5 383.2 270.2zM403.5 281.5C404.5 239.1 378 205.9 327.7 202.2C319.2 201.6 320.1 188.7 328.6 189.3C386.6 193.5 417.5 233.4 416.4 281.8C416.3 290.4 403.3 290 403.5 281.5zM450.5 294.9C450.6 303.5 437.6 303.6 437.6 295C437 213.5 382.7 169.1 316.8 168.6C308.3 168.5 308.3 155.7 316.8 155.7C390.5 156.2 449.8 207.1 450.5 294.9zM439.2 393L439.2 393.2C428.4 412.2 408.2 433.2 387.4 426.5L387.2 426.2C366.1 420.3 316.4 394.7 285 369.7C268.8 356.9 254 341.8 242.6 327.3C232.3 314.4 221.9 299.1 211.8 280.7C190.5 242.2 185.8 225 185.8 225C179.1 204.2 200 184 219.1 173.2L219.3 173.2C228.5 168.4 237.3 170 243.2 177.1C243.2 177.1 255.6 191.9 260.9 199.2C265.9 206 272.6 216.9 276.1 223C282.2 233.9 278.4 245 272.4 249.6L260.4 259.2C254.3 264.1 255.1 273.2 255.1 273.2C255.1 273.2 272.9 340.5 339.4 357.5C339.4 357.5 348.5 358.3 353.4 352.2L363 340.2C367.6 334.2 378.7 330.4 389.6 336.5C404.3 344.8 423 357.7 435.4 369.4C442.4 375.1 444 383.8 439.2 393z"/>
+                    </svg></a>
+
+                    </div>
+
+                </div>
+            </div>
+            
+        
+
+            <select class="header__select header__select--desktop">
+                <option>BYN</option>
+                <option>RUB</option>
+                <option>EUR</option>
+            </select>
+
+            <select class="header__select header__select--desktop">
+                <option>РУС</option>
+                <option>БЕЛ</option>
+                <option>ENG</option>
+            </select>
+
+            <button class="header__button">
+                БРОНИРОВАТЬ
+            </button>
+
+        </nav>
+        <!-- mobile header -->
+        <div class="header_mobile">
+
+            <div class="header__mobile-controls">
+
+            <select class="header__select">
+                <option>BYN</option>
+                <option>RUB</option>
+                <option>EUR</option>
+            </select>
+
+            <select class="header__select">
+                <option>РУС</option>
+                <option>БЕЛ</option>
+                <option>ENG</option>
+            </select>
+
+            </div>
+
+            <button class="header__burger" aria-label="Открыть меню">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+<main>
+
+    <section class="hero">
+
+        <div class="hero__overlay"></div>
+
+        <div class="container">
+
+            <div class="hero__content">
+
+                <h1 class="hero__title">
+                    Экскурсия<br>
+                    Тысячелетний Брест и<br>
+                    Брестская крепость
+                </h1>
+
+                <p class="hero__description">
+                    Погрузитесь в историю наследия заповедной памяти
+                </p>
+
+                <div class="hero__actions">
+                <a
+                    href="#schedule"
+                    class="hero__button"
+                >
+                    РАСПИСАНИЕ
+                </a>
+
+                <a href="#schedule" class="hero__scroll">
+                <svg class="scroll-icon" width="24" height="40" viewBox="0 0 24 40" fill="none">
+                    
+                    <path class="arrow arrow-1" d="M4 6 L12 14 L20 6" stroke="white" stroke-width="2"/>
+                    <path class="arrow arrow-2" d="M4 16 L12 24 L20 16" stroke="white" stroke-width="2"/>
+                    <path class="arrow arrow-3" d="M4 26 L12 34 L20 26" stroke="white" stroke-width="2"/>
+
+                </svg>
+                </a>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="schedule" id="schedule">
+
+        <div class="container">
+
+            <h2 class="schedule__title">
+                Расписание экскурсии<br>
+                Тысячелетний Брест и Брестская крепость
+            </h2>
+             <!-- aорма фильтра -->
+            <form class="schedule-form">
+
+                <div class="schedule-form__group">
+
+                    <label
+                        for="date-from"
+                        class="schedule-form__label"
+                    >
+                        Дата с
+                    </label>
+
+                    <input id="date-from" class="schedule-form__input" type="text" placeholder="дд.мм.гггг">
+
+                </div>
+
+                <div class="schedule-form__group">
+
+                    <label
+                        for="date-to"
+                        class="schedule-form__label"
+                    >
+                        Дата по
+                    </label>
+
+                    <input id="date-to" class="schedule-form__input" type="text" placeholder="дд.мм.гггг">
+
+                </div>
+
+                <div class="schedule-form__group">
+
+                    <label
+                        for="adults"
+                        class="schedule-form__label"
+                    >
+                        Кол-во взрослых
+                    </label>
+
+                    <select
+                        id="adults"
+                        class="schedule-form__select"
+                    >
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+
+                </div>
+
+                <div class="schedule-form__group">
+
+                    <label
+                        for="children"
+                        class="schedule-form__label"
+                    >
+                        Кол-во детей
+                    </label>
+
+                    <select
+                        id="children"
+                        class="schedule-form__select"
+                    >
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                    </select>
+
+                </div>
+
+                <button
+                    class="schedule-form__button"
+                    type="submit">
+                    Поиск
+                </button>
+
+            </form>
+
+            <!-- карточки с местами -->
+            <div class="schedule__list">
+
+            <article class="schedule-card">
+
+                <div class="schedule-card__header">
+
+                    <span class="schedule-card__date">
+                        25.06.2026 (пт.)
+                    </span>
+
+                    <span class="schedule-card__price">
+                        60 BYN/55 BYN
+                    </span>
+
+                </div>
+
+                <p class="schedule-card__time">
+                    Начало: 18:00 ~ 4 ч. 15 мин.
+                </p>
+
+                <div class="schedule-card__footer">
+
+                    <p class="schedule-card__places">
+                        Осталось мест: 2
+                    </p>
+
+                    <button class="schedule-card__button">
+                        Бронировать
+                    </button>
+
+                </div>
+
+            </article>
+
+            <article class="schedule-card">
+
+                <div class="schedule-card__header">
+
+                    <span class="schedule-card__date">
+                        25.06.2026 (пт.)
+                    </span>
+
+                    <span class="schedule-card__price">
+                        60 BYN/55 BYN
+                    </span>
+
+                </div>
+
+                <p class="schedule-card__time">
+                    Начало: 18:00 ~ 4 ч. 15 мин.
+                </p>
+
+                <div class="schedule-card__footer">
+
+                    <p class="schedule-card__places">
+                        Осталось мест: 2
+                    </p>
+
+                    <button class="schedule-card__button">
+                        Бронировать
+                    </button>
+
+                </div>
+
+            </article>
+
+            <article class="schedule-card">
+
+                <div class="schedule-card__header">
+
+                    <span class="schedule-card__date">
+                        26.06.2026 (сб.)
+                    </span>
+
+                    <span class="schedule-card__price">
+                        60 BYN/55 BYN
+                    </span>
+
+                </div>
+
+                <p class="schedule-card__time">
+                    Начало: 18:00 ~ 4 ч. 15 мин.
+                </p>
+
+                <div class="schedule-card__footer">
+
+                    <p class="schedule-card__places">
+                        Осталось мест: 3
+                    </p>
+
+                    <button class="schedule-card__button">
+                        Бронировать
+                    </button>
+
+                </div>
+
+            </article>
+
+            <!-- карточка без мест -->
+            <article class="schedule-card schedule-card--disabled">
+
+                <div class="schedule-card__header">
+
+                    <span class="schedule-card__date">
+                        18.06.2026 (чт.)
+                    </span>
+
+                    <span class="schedule-card__price">
+                        60 BYN/55 BYN
+                    </span>
+
+                </div>
+
+                <p class="schedule-card__time">
+                    Начало: 18:00 ~ 4 ч. 15 мин.
+                </p>
+
+                <div class="schedule-card__footer">
+
+                    <p class="schedule-card__places">
+                        Нет мест
+                    </p>
+
+                </div>
+
+            </article>
+
+        </div>
+
+        </div>
+
+    </section>
+
+    <section class="reviews">
+
+    <div class="container">
+
+        <h2 class="reviews__title">Отзывы наших клиентов</h2>
+
+        <div class="reviews__slider">
+
+            <div class="reviews__track">
+
+                <article class="review-card">
+
+                <img src="images/review.jpg" class="review-card__avatar" alt="Марина">
+
+                <div class="review-card__content">
+
+                    <div class="review-card__header">
+                    <h3 class="review-card__author">
+                        Марина, <span>Санкт-Петербург</span>
+                    </h3>
+
+                    <span class="review-card__date">11 июня 2026</span>
+                    </div>
+
+
+                    <div class="review-card__rating">
+                    <svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.7 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.73 1.64 7.03z"/></svg>
+                    <svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.7 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.73 1.64 7.03z"/></svg>
+                    <svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.7 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.73 1.64 7.03z"/></svg>
+                    <svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.7 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.73 1.64 7.03z"/></svg>
+                    <svg class="star" viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.7 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.73 1.64 7.03z"/></svg>
+                    </div>
+
+                    <p class="review-card__text">
+                    Поездка очень понравилась! Усадьба Огинского, которого знают все, но о нем знают меньше. Быт белорусской усадьбы атмосфере. Три очень интересных костела, православный храм. Гид Юрий рассказывал интересно, видна любовь к родному краю, что всегда вдохновляет. Три очень интересных костела, православный храм. Гид Юрий рассказывал интересно, видна любовь к родному краю, что всегда вдохновляет. 
+                    </p>
+
+                    <button class="review-card__more">далее…</button>
+
+                </div>
+                </article>
+
+                <article class="review-card">
+                <img src="images/review.jpg" class="review-card__avatar" alt="Иван">
+
+                <div class="review-card__content">
+
+                    <div class="review-card__header">
+                    <h3 class="review-card__author">
+                        Марина, <span>Санкт-Петербург</span>
+                    </h3>
+
+                    <span class="review-card__date">10 июня 2026</span>
+                    </div>
+
+                    <div class="review-card__rating">
+                    <svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.7 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.73 1.64 7.03z"/></svg>
+                    <svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.7 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.73 1.64 7.03z"/></svg>
+                    <svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.7 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.73 1.64 7.03z"/></svg>
+                    <svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.7 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.73 1.64 7.03z"/></svg>
+                    <svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.7 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.73 1.64 7.03z"/></svg>
+                    </div>
+
+                    <p class="review-card__text">
+                    Поездка очень понравилась! Усадьба Огинского, которого знают все, но о нем знают меньше. Быт белорусской усадьбы атмосфере. Три очень интересных костела, православный храм. 
+                    </p>
+
+                    <button class="review-card__more">далее…</button>
+
+                </div>
+                </article>
+
+                <article class="review-card">
+                <img src="images/review.jpg" class="review-card__avatar" alt="Иван">
+
+                <div class="review-card__content">
+
+                    <div class="review-card__header">
+                    <h3 class="review-card__author">
+                        Марина, <span>Санкт-Петербург</span>
+                    </h3>
+
+                    <span class="review-card__date">10 июня 2026</span>
+                    </div>
+
+                    <div class="review-card__rating">
+                    <svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.7 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.73 1.64 7.03z"/></svg>
+                    <svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.7 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.73 1.64 7.03z"/></svg>
+                    <svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.7 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.73 1.64 7.03z"/></svg>
+                    <svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.7 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.73 1.64 7.03z"/></svg>
+                    <svg class="star filled" viewBox="0 0 24 24"><path d="M12 17.3l-6.18 3.7 1.64-7.03L2 9.24l7.19-.61L12 2l2.81 6.63 7.19.61-5.46 4.73 1.64 7.03z"/></svg>
+                    </div>
+
+                    <p class="review-card__text">
+                    Поездка очень понравилась! Усадьба Огинского, которого знают все, но о нем знают меньше. Быт белорусской усадьбы атмосфере. Три очень интересных костела, православный храм. 
+                    </p>
+
+                    <button class="review-card__more">далее…</button>
+
+                </div>
+                </article>
+
+            </div>
+            <!-- стрелки слайдера -->
+            <button class="reviews__arrow reviews__arrow--prev" aria-label="Назад">
+            <svg viewBox="0 0 24 24" class="reviews__icon">
+                <path d="M15 18l-6-6 6-6" />
+            </svg>
+            </button>
+
+            <button class="reviews__arrow reviews__arrow--next" aria-label="Вперёд">
+            <svg viewBox="0 0 24 24" class="reviews__icon">
+                <path d="M9 6l6 6-6 6" />
+            </svg>
+            </button>
+
+        </div>
+    </div>
+
+    </section>
+
+</main>
+
+<footer class="footer">
+
+  <div class="container">
+
+    <div class="footer__logo">
+      <img src="images/logo-footer.png" alt="Ekskursii.by">
+    </div>
+
+    <div class="footer__content">
+
+      <div class="footer__contacts">
+
+        <h3 class="footer__title">КОНТАКТЫ</h3>
+
+        <a href="tel:+375173944913" class="footer__phone">
+
+          <svg class="icon icon--phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clip-rule="evenodd"/>
+          </svg>
+
+          +375 17 394-49-13
+        </a>
+                <a href="tel:+375173944913" class="footer__phone">
+
+          <svg class="icon icon--phone" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" d="M1.5 4.5a3 3 0 0 1 3-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 0 1-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 0 0 6.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 0 1 1.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 0 1-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5Z" clip-rule="evenodd"/>
+          </svg>
+
+          +375 29 756-66-65
+        </a>
+
+        <!-- иконки соцсетей -->
+        <div class="footer__socials">
+
+          <a href="#">
+            <svg class="icon icon--social" viewBox="0 0 640 640" fill="currentColor">
+              <path d="M476.9 161.1C435 119.1 379.2 96 319.9 96C197.5 96 97.9 195.6 97.9 318C97.9 357.1 108.1 395.3 127.5 429L96 544L213.7 513.1C246.1 530.8 282.6 540.1 319.8 540.1L319.9 540.1C442.2 540.1 544 440.5 544 318.1C544 258.8 518.8 203.1 476.9 161.1zM319.9 502.7C286.7 502.7 254.2 493.8 225.9 477L219.2 473L149.4 491.3L168 423.2L163.6 416.2C145.1 386.8 135.4 352.9 135.4 318C135.4 216.3 218.2 133.5 320 133.5C369.3 133.5 415.6 152.7 450.4 187.6C485.2 222.5 506.6 268.8 506.5 318.1C506.5 419.9 421.6 502.7 319.9 502.7zM421.1 364.5C415.6 361.7 388.3 348.3 383.2 346.5C378.1 344.6 374.4 343.7 370.7 349.3C367 354.9 356.4 367.3 353.1 371.1C349.9 374.8 346.6 375.3 341.1 372.5C308.5 356.2 287.1 343.4 265.6 306.5C259.9 296.7 271.3 297.4 281.9 276.2C283.7 272.5 282.8 269.3 281.4 266.5C280 263.7 268.9 236.4 264.3 225.3C259.8 214.5 255.2 216 251.8 215.8C248.6 215.6 244.9 215.6 241.2 215.6C237.5 215.6 231.5 217 226.4 222.5C221.3 228.1 207 241.5 207 268.8C207 296.1 226.9 322.5 229.6 326.2C232.4 329.9 268.7 385.9 324.4 410C359.6 425.2 373.4 426.5 391 423.9C401.7 422.3 423.8 410.5 428.4 397.5C433 384.5 433 373.4 431.6 371.1C430.3 368.6 426.6 367.2 421.1 364.5z"/>
+            </svg>
+          </a>
+
+          <a href="#">
+            <svg class="icon icon--social" viewBox="0 0 640 640" fill="currentColor">
+              <path d="M320 72C183 72 72 183 72 320C72 457 183 568 320 568C457 568 568 457 568 320C568 183 457 72 320 72zM435 240.7C431.3 279.9 415.1 375.1 406.9 419C403.4 437.6 396.6 443.8 390 444.4C375.6 445.7 364.7 434.9 350.7 425.7C328.9 411.4 316.5 402.5 295.4 388.5C270.9 372.4 286.8 363.5 300.7 349C304.4 345.2 367.8 287.5 369 282.3C369.2 281.6 369.3 279.2 367.8 277.9C366.3 276.6 364.2 277.1 362.7 277.4C360.5 277.9 325.6 300.9 258.1 346.5C248.2 353.3 239.2 356.6 231.2 356.4C222.3 356.2 205.3 351.4 192.6 347.3C177.1 342.3 164.7 339.6 165.8 331C166.4 326.5 172.5 322 184.2 317.3C256.5 285.8 304.7 265 328.8 255C397.7 226.4 412 221.4 421.3 221.2C423.4 221.2 427.9 221.7 430.9 224.1C432.9 225.8 434.1 228.2 434.4 230.8C434.9 234 435 237.3 434.8 240.6z"/>
+            </svg>
+          </a>
+
+          <a href="#">
+            <svg class="icon icon--social" viewBox="0 0 640 640" fill="currentColor">
+              <path d="M508.3 113.9C495.6 102.2 444.2 64.9 329.6 64.4C329.6 64.4 194.5 56.3 128.7 116.7C92.1 153.3 79.2 207 77.8 273.5C76.4 340 74.7 464.6 194.8 498.4L194.9 498.4L194.8 550C194.8 550 194 570.9 207.8 575.1C224.4 580.3 234.2 564.4 250.1 547.3C258.8 537.9 270.8 524.1 279.9 513.6C362.1 520.5 425.2 504.7 432.4 502.4C449 497 542.9 485 558.1 360.4C573.9 231.8 550.5 150.6 508.3 113.9zM522.2 351C509.3 455 433.2 461.6 419.2 466.1C413.2 468 357.7 481.8 288 477.3C288 477.3 236 540 219.8 556.3C214.5 561.6 208.7 561.1 208.8 550.6C208.8 543.7 209.2 464.9 209.2 464.9L209.2 464.9C107.4 436.7 113.4 330.6 114.5 275.1C115.6 219.6 126.1 174.1 157.1 143.5C212.8 93 327.5 100.5 327.5 100.5C424.4 100.9 470.8 130.1 481.6 139.9C517.3 170.5 535.5 243.7 522.2 351zM383.2 270.2C383.6 278.8 370.7 279.4 370.3 270.8C369.2 248.8 358.9 238.1 337.7 236.9C329.1 236.4 329.9 223.5 338.4 224C366.3 225.5 381.8 241.5 383.2 270.2zM403.5 281.5C404.5 239.1 378 205.9 327.7 202.2C319.2 201.6 320.1 188.7 328.6 189.3C386.6 193.5 417.5 233.4 416.4 281.8C416.3 290.4 403.3 290 403.5 281.5zM450.5 294.9C450.6 303.5 437.6 303.6 437.6 295C437 213.5 382.7 169.1 316.8 168.6C308.3 168.5 308.3 155.7 316.8 155.7C390.5 156.2 449.8 207.1 450.5 294.9zM439.2 393L439.2 393.2C428.4 412.2 408.2 433.2 387.4 426.5L387.2 426.2C366.1 420.3 316.4 394.7 285 369.7C268.8 356.9 254 341.8 242.6 327.3C232.3 314.4 221.9 299.1 211.8 280.7C190.5 242.2 185.8 225 185.8 225C179.1 204.2 200 184 219.1 173.2L219.3 173.2C228.5 168.4 237.3 170 243.2 177.1C243.2 177.1 255.6 191.9 260.9 199.2C265.9 206 272.6 216.9 276.1 223C282.2 233.9 278.4 245 272.4 249.6L260.4 259.2C254.3 264.1 255.1 273.2 255.1 273.2C255.1 273.2 272.9 340.5 339.4 357.5C339.4 357.5 348.5 358.3 353.4 352.2L363 340.2C367.6 334.2 378.7 330.4 389.6 336.5C404.3 344.8 423 357.7 435.4 369.4C442.4 375.1 444 383.8 439.2 393z"/>
+            </svg>
+          </a>
+
+        </div>
+
+      </div>
+
+      <div class="footer__info">
+        <a href="#" class="footer__link">
+         <b>© Частное научно-производственное унитарное предприятие "Автоматизированные технологии туризма"</b>
+        </a>
+        <p>Свидетельство о регистрации №1808 от 9.08.2007 выдано Минским горисполкомом. УНП: 190855081 Сертификат соответствия туристических услуг СТБ № BY/112 04.03. 071.01 00099 выдан Национальным агентством по туризму РБ, действителен до 22.10.2029 г.</p>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+        <a href= "#" class="footer__link">
+        © 2007–2026 Частное научно-производственное унитарное предприятие
+        "Автоматизированные технологии туризма"
+    </a>
+    </div>
+
+  </div>
+
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr/dist/l10n/ru.js"></script>
+<script src="script.js"></script>
+
+
+</body>
+</html>
